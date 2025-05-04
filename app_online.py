@@ -23,7 +23,7 @@ if busca:
     filtro = filtro[filtro.apply(lambda row: busca in str(row).lower(), axis=1)]
 
 st.write(f"### {len(filtro)} frase(s) encontrada(s):")
-selecionada = st.radio("Selecione uma frase para ver variações:", filtro['descricao_ecografica_dos_achados'].tolist(), index=0 if len(filtro) > 0 else None)
+selecionada = st.radio("Selecione uma frase para ver variações:", filtro['descrição ecográfica dos achados'].tolist(), index=0 if len(filtro) > 0 else None)
 
 if selecionada:
     st.markdown("---")
